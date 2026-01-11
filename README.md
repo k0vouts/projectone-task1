@@ -39,8 +39,6 @@ GET http://localhost:8080/greeting
 ```
 **Response:** HTML view with Vistula logo and greeting message
 
-![Greeting Page](screenshots/greeting-page.png)
-
 ## 🏃 Running the Application
 
 1. **Clone the repository**
@@ -93,14 +91,6 @@ Test the endpoints using:
 4. Navigate to `http://localhost:8080/greeting`
 5. Verify HTML page with logo displays
 
-## 📸 Screenshots
-
-### Main Endpoint (`/`)
-![Main Endpoint](screenshots/hello-endpoint.png)
-
-### Greeting Page (`/greeting`)
-![Greeting View](screenshots/greeting-view.png)
-
 ## 📝 Code Highlights
 
 **Controller with @ResponseBody:**
@@ -116,7 +106,48 @@ public String hello() {
 ```java
 @GetMapping("/greeting")
 public String greeting(Model model) {
-    model.addAttribute("message", "Welcome!");
+    model.addAttribute("name", "Student");
     return "greeting";
 }
+```
 
+**HTML Template (greeting.html):**
+```html
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Greeting Page</title>
+</head>
+<body>
+    <h1>Hello, <span th:text="${name}">Guest</span>!</h1>
+    <p>Welcome to Spring Boot application</p>
+    <p>This is a simple example using Thymeleaf template engine and the MVC design pattern</p>
+    
+    <img src="/vistula.png" alt="Vistula Logo" width="300"/>
+</body>
+</html>
+```
+
+## ✅ Requirements Met
+
+- ✓ Created from Spring Initializr
+- ✓ Uses Spring Web dependency
+- ✓ Implements @ResponseBody annotation
+- ✓ Returns plain text response
+- ✓ Implements MVC pattern with view
+- ✓ Includes static resources (image)
+- ✓ Fully functional and tested
+
+## 👨‍💻 Author
+
+Created for the Spring Framework course at Akademia Finansów i Biznesu Vistula.
+
+## 📅 Submission
+
+**Deadline:** January 2026  
+**Repository:** [GitHub Link]
+
+---
+
+*For questions or issues, please contact: d.bielecki@vistula.edu.pl*

@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+    <meta charset="UTF-8">
     <title>Hello Vistula</title>
 </head>
 <body>
 
-<h1 th:text="${message}"></h1>
+<h1 th:text="${message}">Default Message</h1>
 
 <p>
     This is Task 1 of the Spring Framework project.
     The page is returned using the MVC pattern and Thymeleaf.
 </p>
 
-<img src="/logo.png" alt="Vistula Logo" width="250">
+<img th:src="@{/images/logo.png}" alt="Vistula Logo" width="250">
 
 </body>
 </html>

@@ -129,25 +129,3 @@ public String greeting(Model model) {
 </html>
 ```
 
-## ✅ Requirements Met
-
-- ✓ Created from Spring Initializr
-- ✓ Uses Spring Web dependency
-- ✓ Implements @ResponseBody annotation
-- ✓ Returns plain text response
-- ✓ Implements MVC pattern with view
-- ✓ Includes static resources (image)
-- ✓ Fully functional and tested
-
-## 👨‍💻 Author
-
-Created for the Spring Framework course at Akademia Finansów i Biznesu Vistula.
-
-## 📅 Submission
-
-**Deadline:** January 2026  
-**Repository:** [GitHub Link]
-
----
-
-*For questions or issues, please contact: d.bielecki@vistula.edu.pl*
